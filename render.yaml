@@ -3,7 +3,8 @@ services:
     name: php-app
     env: docker
     plan: free
-    dockerfilePath: ./Dockerfile
+    rootDir: .
+    dockerfilePath: Dockerfile
     buildCommand: ""
     startCommand: >
       sh -c "php-fpm & nginx -g 'daemon off;'"
