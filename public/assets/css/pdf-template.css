@@ -1,0 +1,48 @@
+body {
+    font-family: DejaVu Sans, sans-serif;
+    font-size: 12px;
+}
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.header h1 {
+    color: #0e9f6e;
+    margin-bottom: 5px;
+}
+.header .promotion {
+    color: #4a5568;
+    font-size: 14px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f97316;
+    color: white;
+}
+tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
+    color: #666;
+    padding: 10px 0;
+}
+.statut-actif {
+    color: #0e9f6e;
+}
+.statut-inactif {
+    color: #dc2626;
+}

@@ -1,0 +1,372 @@
+/* Styles pour le formulaire d'ajout d'apprenant */
+.content-wrapper {
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.content-header {
+    margin-bottom: 20px;
+}
+
+.content-header h1 {
+    color: #0e9f6e;
+    font-size: 24px;
+    margin: 0;
+}
+
+.breadcrumb {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.breadcrumb-item {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.breadcrumb-item a {
+    color: #0e9f6e;
+    text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "/";
+    padding: 0 8px;
+    color: #d1d5db;
+}
+
+.breadcrumb-item.active {
+    color: #9ca3af;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.card-primary .card-header {
+    background-color: #0e9f6e;
+    color: white;
+    padding: 15px 20px;
+}
+
+.card-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.card-footer {
+    background-color: #f9fafb;
+    border-top: 1px solid #f3f4f6;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #374151;
+    font-size: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.2s;
+    height: 45px;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #0e9f6e;
+    box-shadow: 0 0 0 3px rgba(14, 159, 110, 0.1);
+}
+
+select.form-control {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+    padding-right: 45px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    margin-bottom: 10px;
+}
+
+.col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+    height: 45px;
+}
+
+.custom-file {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 45px;
+    margin-bottom: 0;
+}
+
+.custom-file-input {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 45px;
+    margin: 0;
+    opacity: 0;
+}
+
+.custom-file-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    height: 45px;
+    padding: 12px 15px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #6b7280;
+    background-color: #fff;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+}
+
+.custom-file-input:focus ~ .custom-file-label {
+    border-color: #0e9f6e;
+    box-shadow: 0 0 0 3px rgba(14, 159, 110, 0.1);
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    min-width: 120px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #0e9f6e;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0b8a5f;
+}
+
+.btn-default {
+    color: #374151;
+    background-color: #f3f4f6;
+    border: 1px solid #d1d5db;
+}
+
+.btn-default:hover {
+    background-color: #e5e7eb;
+}
+
+hr {
+    margin: 30px 0;
+    border: 0;
+    border-top: 1px solid #f3f4f6;
+}
+
+h4 {
+    color: #1f2937;
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.alert {
+    position: relative;
+    padding: 15px 20px;
+    margin-bottom: 25px;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.alert-success {
+    color: #065f46;
+    background-color: #d1fae5;
+    border: 1px solid #a7f3d0;
+}
+
+.alert-danger {
+    color: #b91c1c;
+    background-color: #fee2e2;
+    border: 1px solid #fecaca;
+}
+
+.alert-dismissible {
+    padding-right: 50px;
+}
+
+.alert-dismissible .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px 20px;
+    color: inherit;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .card-footer {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .card-body {
+        padding: 20px;
+    }
+    
+    .row {
+        margin: 0 -10px;
+    }
+    
+    .col-md-6 {
+        padding: 0 10px;
+    }
+}
+
+/* Ajout ou modification pour augmenter la taille du div col-md-12 */
+.col-md-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+    margin-bottom: 30px; /* Ajoute de l'espace en bas */
+}
+
+/* Augmenter la taille de la carte à l'intérieur du col-md-12 */
+.col-md-12 .card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    border-radius: 10px; /* Coins plus arrondis */
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.col-md-12 .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Augmenter la taille de l'en-tête de la carte */
+.col-md-12 .card-header {
+    padding: 20px 25px; /* Plus d'espace dans l'en-tête */
+}
+
+.col-md-12 .card-title {
+    font-size: 20px; /* Titre plus grand */
+    font-weight: 600;
+}
+
+/* Augmenter l'espace dans le corps de la carte */
+.col-md-12 .card-body {
+    padding: 35px; /* Plus d'espace autour du contenu */
+}
+
+/* Augmenter l'espace dans le pied de la carte */
+.col-md-12 .card-footer {
+    padding: 20px 25px;
+}
+
+/* Améliorer la mise en page globale */
+.container-fluid {
+    max-width: 1500px; /* Augmenter la largeur maximale */
+    margin: 0 auto;
+    padding: 0 30px; /* Plus d'espace sur les côtés */
+}
+
+/* Ajouter de l'espace autour de la section de contenu */
+.content {
+    padding: 20px 0 40px; /* Plus d'espace en bas */
+}
+
+/* Améliorer l'apparence des boutons dans le pied de page */
+.col-md-12 .card-footer .btn {
+    padding: 12px 25px; /* Boutons plus grands */
+    font-size: 16px;
+    min-width: 140px; /* Largeur minimale plus grande */
+}
+
+/* Améliorer l'espacement entre les sections du formulaire */
+.col-md-12 hr {
+    margin: 35px 0; /* Plus d'espace autour des séparateurs */
+    border-top: 1px solid #e5e7eb; /* Séparateur légèrement plus visible */
+}
+
+.col-md-12 h4 {
+    font-size: 20px; /* Titres de section plus grands */
+    margin-bottom: 25px;
+    color: #0e9f6e; /* Couleur qui correspond à votre thème */
+}
+
+/* Amélioration de l'apparence des champs de date */
+input[type="date"].form-control {
+    padding-right: 10px;
+}

@@ -1,0 +1,670 @@
+{
+    "users": [
+        {
+            "id": "1",
+            "name": "Admin",
+            "email": "admin@odc.sn",
+            "password": "passer123",
+            "profile": "Admin",
+            "reset_token": "258592ff61ed755b3507629891adab41",
+            "reset_expire": 1745458480
+        }
+    ],
+    "promotions": [
+        {
+            "name": "Promotion 2024",
+            "date_debut": "2023-06-21",
+            "date_fin": "2025-04-21",
+            "image": "68101a0ad87fe_680a313657c30.jpeg",
+            "referentiels": [
+                "1",
+                "2",
+                "3"
+            ],
+            "id": 1,
+            "status": "inactive",
+            "apprenants": [
+                {
+                    "matricule": "ODC-2025-4402",
+                    "prenom": "Raymond",
+                    "nom": "Thierry",
+                    "email": "jbourdon@gosselin.com",
+                    "adresse": "64, boulevard Laurent, 20243 Sainte Andr\u00e9enec",
+                    "telephone": "+33 (0)4 97 28 27 15",
+                    "referentiel_id": "1",
+                    "date_creation": "2025-04-30 08:44:02",
+                    "photo": "",
+                    "statut": "Actif",
+                    "tuteur": [],
+                    "promotion_id": 1
+                },
+                {
+                    "matricule": "ODC-2025-9032",
+                    "prenom": "Raymond",
+                    "nom": "Thierry",
+                    "email": "jbourdon@gosselin.com",
+                    "adresse": "64, boulevard Laurent, 20243 Sainte Andr\u00e9enec",
+                    "telephone": "+33 (0)4 97 28 27 15",
+                    "referentiel_id": "1",
+                    "date_creation": "2025-04-30 08:46:31",
+                    "photo": "assets\/images\/uploads\/apprenants\/apprenant_68109762f2068.jpeg",
+                    "statut": "Inactif",
+                    "tuteur": [],
+                    "promotion_id": 1
+                },
+                {
+                    "matricule": "ODC-2025-5431",
+                    "prenom": "Corinne",
+                    "nom": "Lucas",
+                    "email": "toussaintalice@wanadoo.fr",
+                    "adresse": "745, rue Sylvie Bernier, 98571 Delahaye",
+                    "telephone": "770808692503",
+                    "referentiel_id": 2,
+                    "date_creation": "2025-04-30 08:47:51",
+                    "photo": "",
+                    "statut": "Actif",
+                    "tuteur": [],
+                    "promotion_id": 1
+                },
+                {
+                    "matricule": "ODC-2025-5168",
+                    "prenom": "Raymond",
+                    "nom": "Thierry",
+                    "email": "jbourdon@gosselin.com",
+                    "adresse": "64, boulevard Laurent, 20243 Sainte Andr\u00e9enec",
+                    "telephone": "+33 (0)4 97 28 27 15",
+                    "referentiel_id": "1",
+                    "date_creation": "2025-04-30 08:47:51",
+                    "photo": "",
+                    "statut": "Actif",
+                    "tuteur": [],
+                    "promotion_id": 1
+                },
+                {
+                    "matricule": "ODC-2025-6310",
+                    "prenom": "abou",
+                    "nom": "dieng",
+                    "date_naissance": "2002-11-16",
+                    "lieu_naissance": "Guediawaye",
+                    "adresse": "Tivaouane Peulh",
+                    "email": "admin@odc.sn",
+                    "telephone": "765936790",
+                    "referentiel_id": "1",
+                    "date_creation": "2025-04-30 20:09:46",
+                    "photo": "assets\/images\/uploads\/apprenants\/apprenant_6812838aecfa7.png",
+                    "statut": "Inactif",
+                    "tuteur": {
+                        "nom": "Lamine Diam\u00e9",
+                        "lien": "P\u00e8re",
+                        "adresse": "Tivaouane Peulh",
+                        "telephone": "765936790"
+                    },
+                    "promotion_id": 1
+                },
+                {
+                    "matricule": "ODC-2025-4527",
+                    "prenom": "Becaye ",
+                    "nom": "Seye",
+                    "date_naissance": "2000-12-10",
+                    "lieu_naissance": "Keur Mbaye Fall",
+                    "adresse": "Apix Z\/R",
+                    "email": "becayeseye@gmail.com",
+                    "telephone": "774753104",
+                    "referentiel_id": "1",
+                    "date_creation": "2025-05-01 09:02:28",
+                    "photo": "assets\/images\/uploads\/apprenants\/apprenant_681338a487d82.png",
+                    "statut": "Actif",
+                    "tuteur": {
+                        "nom": "Papa Seye",
+                        "lien": "P\u00e8re",
+                        "adresse": "Tivaouane Peulh",
+                        "telephone": "704662248"
+                    },
+                    "promotion_id": 1
+                },
+                {
+                    "matricule": "ODC-2025-5705",
+                    "prenom": "Rassoul ",
+                    "nom": "Diam\u00e9",
+                    "date_naissance": "2000-10-18",
+                    "lieu_naissance": "Pikine",
+                    "adresse": "Tivaouane Peulh",
+                    "email": "rassoul@gmail.com",
+                    "telephone": "789304002",
+                    "referentiel_id": "2",
+                    "date_creation": "2025-05-01 09:31:08",
+                    "photo": "assets\/images\/uploads\/apprenants\/apprenant_68133f5c15457.png",
+                    "statut": "Actif",
+                    "tuteur": {
+                        "nom": "Lamine Diam\u00e9",
+                        "lien": "P\u00e8re",
+                        "adresse": "Tivaouane Peulh",
+                        "telephone": "765936790"
+                    },
+                    "promotion_id": 1
+                },
+                {
+                    "matricule": "ODC-2025-6447",
+                    "prenom": "Bamba",
+                    "nom": "Fall",
+                    "date_naissance": "5678-04-23",
+                    "lieu_naissance": "fevhiurfb",
+                    "adresse": "ejviervhberj",
+                    "email": "bamba@gmail.com",
+                    "telephone": "354568790",
+                    "referentiel_id": "3",
+                    "date_creation": "2025-05-01 10:13:37",
+                    "photo": "assets\/images\/uploads\/apprenants\/apprenant_681349510dfed.png",
+                    "statut": "Actif",
+                    "tuteur": {
+                        "nom": "jrferugbutbgru bfeuryfu",
+                        "lien": "neveu",
+                        "adresse": "Tivaouane Peulh",
+                        "telephone": "5267637887"
+                    },
+                    "promotion_id": 1
+                }
+            ]
+        },
+        {
+            "name": "Promotion 2023",
+            "date_debut": "2022-06-21",
+            "date_fin": "2023-04-21",
+            "image": "68101a28b9b08_680b7af21eea3_WhatsApp Image 2025-03-18 at 09.03.51.jpeg",
+            "referentiels": [
+                "1",
+                "2",
+                "680551196d5ac"
+            ],
+            "id": 2,
+            "status": "inactive",
+            "apprenants": [
+                {
+                    "matricule": "ODC-2025-7940",
+                    "prenom": "fberhgfberhj",
+                    "nom": "erjfejr",
+                    "date_naissance": "2025-05-01",
+                    "lieu_naissance": "efvbhrbjv",
+                    "adresse": "fjberhbfjhrbgjtr",
+                    "email": "zfbvuerfuber@zefef",
+                    "telephone": "245673789",
+                    "referentiel_id": "1",
+                    "date_creation": "2025-05-01 10:21:58",
+                    "photo": "assets\/images\/uploads\/apprenants\/apprenant_68134b465f960.png",
+                    "statut": "Actif",
+                    "tuteur": {
+                        "nom": "Lamine Fall",
+                        "lien": "fr\u00e9re",
+                        "adresse": "Tivaouane Peulh",
+                        "telephone": "765936790"
+                    },
+                    "promotion_id": 2
+                }
+            ]
+        },
+        {
+            "name": "Promotion 2022",
+            "date_debut": "2021-06-21",
+            "date_fin": "2022-04-21",
+            "image": "68101a5b3ece2_ref.png",
+            "referentiels": [
+                "1",
+                "2"
+            ],
+            "id": 3,
+            "status": "inactive",
+            "apprenants": []
+        },
+        {
+            "name": "Promotion 2025",
+            "date_debut": "2025-06-21",
+            "date_fin": "2025-09-21",
+            "image": "68134d8a16fff_Capture d\u2019\u00e9cran du 2025-04-05 13-21-29.png",
+            "referentiels": [
+                "68055a7e7d4e3"
+            ],
+            "id": 4,
+            "status": "active",
+            "apprenants": []
+        }
+    ],
+    "referentiels": [
+        {
+            "id": "1",
+            "name": "Dev Web",
+            "description": "Formation d\u00e9veloppement web",
+            "image": "assets\/images\/uploads\/referentiels\/refdig.png",
+            "modules": []
+        },
+        {
+            "id": 2,
+            "name": "R\u00e9f\u00e9rentiel Data",
+            "description": "Science des donn\u00e9es et IA",
+            "image": "assets\/images\/uploads\/referentiels\/refdig.png",
+            "status": "active"
+        },
+        {
+            "id": 3,
+            "name": "R\u00e9f\u00e9rentiel DevOps",
+            "description": "Administration syst\u00e8me et d\u00e9ploiement",
+            "image": "assets\/images\/uploads\/referentiels\/refdig.png",
+            "status": "active"
+        },
+        {
+            "id": 4,
+            "name": "R\u00e9f\u00e9rentiel Mobile",
+            "description": "D\u00e9veloppement d'applications mobiles",
+            "image": "assets\/images\/uploads\/referentiels\/refdig.png",
+            "status": "active"
+        },
+        {
+            "id": "680551196d5ac",
+            "name": "Dev Data",
+            "description": "la science ",
+            "image": "assets\/images\/uploads\/referentiels\/refdig.png",
+            "capacite": 30,
+            "sessions": 10,
+            "modules": []
+        },
+        {
+            "id": "68055255052f5",
+            "name": "nfj",
+            "description": "chc",
+            "image": "assets\/images\/uploads\/referentiels\/refdig.png",
+            "capacite": 30,
+            "sessions": 10,
+            "modules": []
+        },
+        {
+            "id": "680552ef31e03",
+            "name": "sbsdh",
+            "description": "cjdj",
+            "image": "assets\/images\/uploads\/referentiels\/refdig.png",
+            "capacite": 30,
+            "sessions": 10,
+            "modules": []
+        },
+        {
+            "id": "680553b967e8b",
+            "name": "dev web",
+            "description": "la science de ns  jour",
+            "image": "assets\/images\/uploads\/referentiels\/refdig.png",
+            "capacite": 30,
+            "sessions": 10,
+            "modules": []
+        },
+        {
+            "id": "680554ece9556",
+            "name": "dev ref",
+            "description": "xx",
+            "image": "assets\/images\/uploads\/referentiels\/refdig.png",
+            "capacite": 30,
+            "sessions": 10,
+            "modules": []
+        },
+        {
+            "id": "680557b9a0a57",
+            "name": "xchch",
+            "description": "nchc",
+            "image": "assets\/images\/uploads\/referentiels\/refdig.png",
+            "capacite": 30,
+            "sessions": 10,
+            "modules": []
+        },
+        {
+            "id": "680559b417dab",
+            "name": "aws",
+            "description": "la science ",
+            "image": "assets\/images\/uploads\/referentiels\/refdig.png",
+            "capacite": 30,
+            "sessions": 10,
+            "modules": []
+        },
+        {
+            "id": "68055a4959120",
+            "name": "dndndhhh",
+            "description": "la science ",
+            "image": "assets\/images\/uploads\/referentiels\/refdig.png",
+            "capacite": 30,
+            "sessions": 10,
+            "modules": []
+        },
+        {
+            "id": "68055a7e7d4e3",
+            "name": "cloud",
+            "description": "xdhdh",
+            "image": "assets\/images\/uploads\/referentiels\/refdig.png",
+            "capacite": 30,
+            "sessions": 10,
+            "modules": []
+        },
+        {
+            "id": "68055b45eb279",
+            "name": "cloud aws",
+            "description": "la science de nos jour",
+            "image": "assets\/images\/uploads\/referentiels\/refdig.png",
+            "capacite": 30,
+            "sessions": 10,
+            "modules": []
+        },
+        {
+            "id": "680e1df5edafa",
+            "name": "DATA-SCIENCE",
+            "description": "JNNINININNNINININ",
+            "capacite": "30",
+            "sessions": "1",
+            "modules": [],
+            "image": "assets\/images\/uploads\/referentiels\/680e1df5ed9bf_37e6c773851273ab8457da3f39a9c5e2.jpg"
+        },
+        {
+            "id": "680e1e1cb468e",
+            "name": "DATA-SCIENCEeuhuyru",
+            "description": "rjvrvntvintrbntrnb",
+            "capacite": "35",
+            "sessions": "1",
+            "modules": [],
+            "image": "assets\/images\/uploads\/referentiels\/680e1e1cb456c_37e6c773851273ab8457da3f39a9c5e2.jpg"
+        },
+        {
+            "id": "680e5975d6f1f",
+            "name": "WANE",
+            "description": "JEFNVN",
+            "capacite": "30",
+            "sessions": "1",
+            "modules": [],
+            "image": "assets\/images\/uploads\/referentiels\/680e5975d6e68_37e6c773851273ab8457da3f39a9c5e2.jpg"
+        }
+    ],
+    "apprenants": [
+        {
+            "matricule": "ODC-2024-0001",
+            "prenom": "Prenom1",
+            "nom": "Nom1",
+            "adresse": "Adresse 1",
+            "telephone": "89398",
+            "referentiel_id": 1,
+            "statut": "Inactif"
+        },
+        {
+            "matricule": "ODC-2024-0002",
+            "prenom": "Prenom2",
+            "nom": "Nom2",
+            "adresse": "Adresse 2",
+            "telephone": "770000002",
+            "referentiel_id": 1,
+            "statut": "Actif"
+        },
+        {
+            "matricule": "ODC-2024-0003",
+            "prenom": "Prenom3",
+            "nom": "Nom3",
+            "adresse": "Adresse 3",
+            "telephone": "770000003",
+            "referentiel_id": 1,
+            "statut": "Inactif"
+        },
+        {
+            "matricule": "ODC-2024-0004",
+            "prenom": "Prenom4",
+            "nom": "Nom4",
+            "adresse": "Adresse 4",
+            "telephone": "770000004",
+            "referentiel_id": 1,
+            "statut": "Actif"
+        },
+        {
+            "matricule": "ODC-2024-0005",
+            "prenom": "Prenom5",
+            "nom": "Nom5",
+            "adresse": "Adresse 5",
+            "telephone": "770000005",
+            "referentiel_id": 1,
+            "statut": "Inactif"
+        },
+        {
+            "matricule": "ODC-2024-0006",
+            "prenom": "Prenom6",
+            "nom": "Nom6",
+            "adresse": "Adresse 6",
+            "telephone": "770000006",
+            "referentiel_id": 1,
+            "statut": "Actif"
+        },
+        {
+            "matricule": "ODC-2024-0007",
+            "prenom": "Prenom7",
+            "nom": "Nom7",
+            "adresse": "Adresse 7",
+            "telephone": "770000007",
+            "referentiel_id": 1,
+            "statut": "Inactif"
+        },
+        {
+            "matricule": "ODC-2024-0008",
+            "prenom": "Prenom8",
+            "nom": "Nom8",
+            "adresse": "Adresse 8",
+            "telephone": "770000008",
+            "referentiel_id": 1,
+            "statut": "Actif"
+        },
+        {
+            "matricule": "ODC-2024-0009",
+            "prenom": "Prenom9",
+            "nom": "Nom9",
+            "adresse": "Adresse 9",
+            "telephone": "770000009",
+            "referentiel_id": 1,
+            "statut": "Inactif"
+        },
+        {
+            "matricule": "ODC-2024-0010",
+            "prenom": "Prenom10",
+            "nom": "Nom10",
+            "adresse": "Adresse 10",
+            "telephone": "770000010",
+            "referentiel_id": 1,
+            "statut": "Actif"
+        },
+        {
+            "matricule": "ODC-2024-0011",
+            "prenom": "Prenom11",
+            "nom": "Nom11",
+            "adresse": "Adresse 11",
+            "telephone": "770000011",
+            "referentiel_id": 1,
+            "statut": "Inactif"
+        },
+        {
+            "matricule": "ODC-2024-0012",
+            "prenom": "Prenom12",
+            "nom": "Nom12",
+            "adresse": "Adresse 12",
+            "telephone": "770000012",
+            "referentiel_id": 1,
+            "statut": "Actif"
+        },
+        {
+            "matricule": "ODC-2025-2040",
+            "prenom": "Pabass",
+            "nom": "Diam\u00e9",
+            "date_naissance": "2001-08-06",
+            "lieu_naissance": "HLM6",
+            "adresse": "Tivaouane Peulh",
+            "email": "pabassdiame76@odc.sn",
+            "telephone": "776237675",
+            "referentiel_id": "680e1df5edafa",
+            "date_creation": "2025-04-29 09:09:54",
+            "photo": "assets\/images\/uploads\/apprenants\/apprenant_68109762f2068.jpeg",
+            "statut": "Inactif",
+            "tuteur": {
+                "nom": "Lamine Fall",
+                "lien": "fr\u00e9re",
+                "adresse": "Tivaouane Peulh",
+                "telephone": "765936790"
+            },
+            "promotion_id": null
+        },
+        {
+            "matricule": "ODC-2025-4402",
+            "prenom": "Raymond",
+            "nom": "Thierry",
+            "email": "jbourdon@gosselin.com",
+            "adresse": "64, boulevard Laurent, 20243 Sainte Andr\u00e9enec",
+            "telephone": "+33 (0)4 97 28 27 15",
+            "referentiel_id": "1",
+            "date_creation": "2025-04-30 08:44:02",
+            "photo": "",
+            "statut": "Actif",
+            "tuteur": [],
+            "promotion_id": 1
+        },
+        {
+            "matricule": "ODC-2025-9032",
+            "prenom": "Raymond",
+            "nom": "Thierry",
+            "email": "jbourdon@gosselin.com",
+            "adresse": "64, boulevard Laurent, 20243 Sainte Andr\u00e9enec",
+            "telephone": "+33 (0)4 97 28 27 15",
+            "referentiel_id": "1",
+            "date_creation": "2025-04-30 08:46:31",
+            "photo": "",
+            "statut": "Actif",
+            "tuteur": [],
+            "promotion_id": 1
+        },
+        {
+            "matricule": "ODC-2025-5431",
+            "prenom": "Corinne",
+            "nom": "Lucas",
+            "email": "toussaintalice@wanadoo.fr",
+            "adresse": "745, rue Sylvie Bernier, 98571 Delahaye",
+            "telephone": "770808692503",
+            "referentiel_id": 2,
+            "date_creation": "2025-04-30 08:47:51",
+            "photo": "",
+            "statut": "Actif",
+            "tuteur": [],
+            "promotion_id": 1
+        },
+        {
+            "matricule": "ODC-2025-5168",
+            "prenom": "Raymond",
+            "nom": "Thierry",
+            "email": "jbourdon@gosselin.com",
+            "adresse": "64, boulevard Laurent, 20243 Sainte Andr\u00e9enec",
+            "telephone": "+33 (0)4 97 28 27 15",
+            "referentiel_id": "1",
+            "date_creation": "2025-04-30 08:47:51",
+            "photo": "",
+            "statut": "Actif",
+            "tuteur": [],
+            "promotion_id": 1
+        },
+        {
+            "matricule": "ODC-2025-6310",
+            "prenom": "abou",
+            "nom": "dieng",
+            "date_naissance": "2002-11-16",
+            "lieu_naissance": "Guediawaye",
+            "adresse": "Tivaouane Peulh",
+            "email": "admin@odc.sn",
+            "telephone": "765936790",
+            "referentiel_id": "1",
+            "date_creation": "2025-04-30 20:09:46",
+            "photo": "assets\/images\/uploads\/apprenants\/apprenant_6812838aecfa7.png",
+            "statut": "Actif",
+            "tuteur": {
+                "nom": "Lamine Diam\u00e9",
+                "lien": "P\u00e8re",
+                "adresse": "Tivaouane Peulh",
+                "telephone": "765936790"
+            },
+            "promotion_id": null
+        },
+        {
+            "matricule": "ODC-2025-4527",
+            "prenom": "Becaye ",
+            "nom": "Seye",
+            "date_naissance": "2000-12-10",
+            "lieu_naissance": "Keur Mbaye Fall",
+            "adresse": "Apix Z\/R",
+            "email": "becayeseye@gmail.com",
+            "telephone": "774753104",
+            "referentiel_id": "1",
+            "date_creation": "2025-05-01 09:02:28",
+            "photo": "assets\/images\/uploads\/apprenants\/apprenant_681338a487d82.png",
+            "statut": "Actif",
+            "tuteur": {
+                "nom": "Papa Seye",
+                "lien": "P\u00e8re",
+                "adresse": "Tivaouane Peulh",
+                "telephone": "704662248"
+            },
+            "promotion_id": null
+        },
+        {
+            "matricule": "ODC-2025-5705",
+            "prenom": "Rassoul ",
+            "nom": "Diam\u00e9",
+            "date_naissance": "2000-10-18",
+            "lieu_naissance": "Pikine",
+            "adresse": "Tivaouane Peulh",
+            "email": "rassoul@gmail.com",
+            "telephone": "789304002",
+            "referentiel_id": "2",
+            "date_creation": "2025-05-01 09:31:08",
+            "photo": "assets\/images\/uploads\/apprenants\/apprenant_68133f5c15457.png",
+            "statut": "Actif",
+            "tuteur": {
+                "nom": "Lamine Diam\u00e9",
+                "lien": "P\u00e8re",
+                "adresse": "Tivaouane Peulh",
+                "telephone": "765936790"
+            },
+            "promotion_id": null
+        },
+        {
+            "matricule": "ODC-2025-6447",
+            "prenom": "Bamba",
+            "nom": "Fall",
+            "date_naissance": "5678-04-23",
+            "lieu_naissance": "fevhiurfb",
+            "adresse": "ejviervhberj",
+            "email": "bamba@gmail.com",
+            "telephone": "354568790",
+            "referentiel_id": "3",
+            "date_creation": "2025-05-01 10:13:37",
+            "photo": "assets\/images\/uploads\/apprenants\/apprenant_681349510dfed.png",
+            "statut": "Actif",
+            "tuteur": {
+                "nom": "jrferugbutbgru bfeuryfu",
+                "lien": "neveu",
+                "adresse": "Tivaouane Peulh",
+                "telephone": "5267637887"
+            },
+            "promotion_id": null
+        },
+        {
+            "matricule": "ODC-2025-7940",
+            "prenom": "fberhgfberhj",
+            "nom": "erjfejr",
+            "date_naissance": "2025-05-01",
+            "lieu_naissance": "efvbhrbjv",
+            "adresse": "fjberhbfjhrbgjtr",
+            "email": "zfbvuerfuber@zefef",
+            "telephone": "245673789",
+            "referentiel_id": "1",
+            "date_creation": "2025-05-01 10:21:58",
+            "photo": "assets\/images\/uploads\/apprenants\/apprenant_68134b465f960.png",
+            "statut": "Actif",
+            "tuteur": {
+                "nom": "Lamine Fall",
+                "lien": "fr\u00e9re",
+                "adresse": "Tivaouane Peulh",
+                "telephone": "765936790"
+            },
+            "promotion_id": null
+        }
+    ]
+}
