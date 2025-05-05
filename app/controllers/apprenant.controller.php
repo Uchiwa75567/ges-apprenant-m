@@ -9,11 +9,303 @@ require_once __DIR__ . '/../services/session.service.php';
 require_once __DIR__ . '/../translate/fr/error.fr.php';
 require_once __DIR__ . '/../translate/fr/message.fr.php';
 require_once __DIR__ . '/../enums/profile.enum.php';
+// Ajouter ces lignes au début du fichier
+require_once __DIR__ . '/../../vendor/autoload.php';
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
 use App\Models;
 use App\Services;
 use App\Translate\fr;
 use App\Enums;
+
+// Fonction pour envoyer un email de bienvenue
+function envoyer_email($email, $nom_complet, $matricule, $password, $promotion_nom, $referentiel_nom, $date_debut) {
+    $mail = new PHPMailer(true);
+    try {
+        // Paramètres serveur SMTP
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com'; // Serveur SMTP de Gmail
+        $mail->SMTPAuth = true;
+        $mail->Username = 'pabassdiame76@gmail.com'; // Votre adresse Gmail
+        $mail->Password = 'lpst qzsg eydl nuaw  '; // Mot de passe d'application Gmail
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // SSL
+        $mail->Port = 465;
+        
+        // Expéditeur
+        $mail->setFrom('pabassdiame76@gmail.com', 'GESTION APPRENANTS');
+        
+        // Destinataire
+        $mail->addAddress($email, $nom_complet);
+        
+        // Contenu
+        $mail->isHTML(true);
+        $mail->Subject = 'Bienvenue à Sonatel Academy !';
+        
+        // Logo SVG intégré directement (version simplifiée du logo Sonatel)
+        $logo_svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100" width="180">
+            <rect x="10" y="20" width="280" height="60" rx="10" fill="#f97316"/>
+            <text x="150" y="65" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="white" text-anchor="middle">SONATEL</text>
+            <text x="150" y="85" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle">ACADEMY</text>
+        </svg>';
+        
+        // Convertir le SVG en base64 pour l'intégrer dans l'email
+        $logo_base64 = 'data:image/svg+xml;base64,' . base64_encode($logo_svg);
+        
+        // Corps de l'email avec style amélioré
+        $mail->Body = "
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset='utf-8'>
+            <title>Bienvenue chez Sonatel Academy</title>
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+                
+                body {
+                    font-family: 'Poppins', Arial, sans-serif;
+                    line-height: 1.6;
+                    color: #333333;
+                    margin: 0;
+                    padding: 0;
+                    background-color: #f5f5f5;
+                }
+                
+                .container {
+                    max-width: 650px;
+                    margin: 0 auto;
+                    background-color: #ffffff;
+                    border-radius: 8px;
+                    overflow: hidden;
+                    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+                
+                .header {
+                    background: linear-gradient(135deg, #ff8c00, #f97316);
+                    padding: 30px 20px;
+                    text-align: center;
+                    position: relative;
+                }
+                
+                .header::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    height: 30px;
+                    background: linear-gradient(135deg, transparent 25px, #ffffff 0);
+                }
+                
+                .logo {
+                    max-width: 180px;
+                    margin: 0 auto 15px;
+                    display: block;
+                }
+                
+                .welcome-text {
+                    color: white;
+                    font-size: 24px;
+                    font-weight: 600;
+                    margin: 0;
+                    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+                }
+                
+                .content {
+                    padding: 30px;
+                    background-color: #ffffff;
+                }
+                
+                h1 {
+                    color: #f97316;
+                    margin-top: 0;
+                    font-size: 28px;
+                    font-weight: 600;
+                    border-bottom: 2px solid #f0f0f0;
+                    padding-bottom: 10px;
+                }
+                
+                p {
+                    margin-bottom: 16px;
+                    color: #555;
+                }
+                
+                .info-box {
+                    background-color: #fff8f3;
+                    border-left: 4px solid #f97316;
+                    padding: 20px;
+                    margin: 25px 0;
+                    border-radius: 4px;
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+                }
+                
+                .info-box h3 {
+                    color: #f97316;
+                    margin-top: 0;
+                    font-size: 18px;
+                }
+                
+                .info-item {
+                    display: flex;
+                    margin-bottom: 10px;
+                    align-items: center;
+                }
+                
+                .info-label {
+                    font-weight: 600;
+                    width: 140px;
+                    color: #333;
+                }
+                
+                .info-value {
+                    flex: 1;
+                    padding: 8px 12px;
+                    background-color: #f5f5f5;
+                    border-radius: 4px;
+                    font-family: 'Courier New', monospace;
+                    font-weight: 500;
+                }
+                
+                .footer {
+                    background-color: #333333;
+                    color: #ffffff;
+                    text-align: center;
+                    padding: 20px;
+                    font-size: 13px;
+                }
+                
+                .btn {
+                    display: inline-block;
+                    background: linear-gradient(to right, #f97316, #ff8c00);
+                    color: white;
+                    padding: 12px 25px;
+                    text-decoration: none;
+                    border-radius: 30px;
+                    margin-top: 20px;
+                    font-weight: 500;
+                    text-align: center;
+                    box-shadow: 0 4px 10px rgba(249, 115, 22, 0.3);
+                    transition: all 0.3s ease;
+                }
+                
+                .btn:hover {
+                    background: linear-gradient(to right, #ff8c00, #f97316);
+                    box-shadow: 0 6px 15px rgba(249, 115, 22, 0.4);
+                    transform: translateY(-2px);
+                }
+                
+                .highlight {
+                    font-weight: 600;
+                    color: #f97316;
+                }
+                
+                .divider {
+                    height: 1px;
+                    background-color: #f0f0f0;
+                    margin: 25px 0;
+                }
+                
+                .social-links {
+                    margin-top: 15px;
+                }
+                
+                .social-icon {
+                    display: inline-block;
+                    margin: 0 5px;
+                    width: 30px;
+                    height: 30px;
+                    background-color: #555;
+                    border-radius: 50%;
+                    text-align: center;
+                    line-height: 30px;
+                    color: white;
+                    font-size: 16px;
+                    text-decoration: none;
+                }
+                
+                .note {
+                    font-size: 13px;
+                    color: #777;
+                    font-style: italic;
+                    margin-top: 20px;
+                }
+            </style>
+        </head>
+        <body>
+            <div class='container'>
+                <div class='header'>
+                    <img src='$logo_base64' alt='Sonatel Academy Logo' class='logo'>
+                    <p class='welcome-text'>Bienvenue dans votre parcours d'excellence !</p>
+                </div>
+                
+                <div class='content'>
+                    <h1>Bonjour, $nom_complet !</h1>
+                    
+                    <p>Nous sommes ravis de vous accueillir à la <span class='highlight'>Sonatel Academy</span>. Votre parcours de formation commence maintenant, et nous sommes impatients de vous accompagner vers la réussite.</p>
+                    
+                    <p>Vous avez été inscrit(e) à la promotion <span class='highlight'>$promotion_nom</span> dans le référentiel <span class='highlight'>$referentiel_nom</span>.</p>
+                    
+                    <div class='info-box'>
+                        <h3>🔐 Vos informations de connexion</h3>
+                        
+                        <div class='info-item'>
+                            <div class='info-label'>Matricule :</div>
+                            <div class='info-value'>$matricule</div>
+                        </div>
+                        
+                        <div class='info-item'>
+                            <div class='info-label'>Email :</div>
+                            <div class='info-value'>$email</div>
+                        </div>
+                        
+                        <div class='info-item'>
+                            <div class='info-label'>Mot de passe :</div>
+                            <div class='info-value'>$password</div>
+                        </div>
+                        
+                        <p class='note'>Pour des raisons de sécurité, nous vous recommandons vivement de changer votre mot de passe lors de votre première connexion.</p>
+                    </div>
+                    
+                    <div class='divider'></div>
+                    
+                    <p>La formation débutera le <span class='highlight'>$date_debut</span>. Connectez-vous dès maintenant pour :</p>
+                    
+                    <ul>
+                        <li>Découvrir votre emploi du temps</li>
+                        <li>Accéder aux ressources pédagogiques</li>
+                        <li>Faire connaissance avec votre promotion</li>
+                        <li>Préparer votre parcours d'apprentissage</li>
+                    </ul>
+                    
+                    <div style='text-align: center;'>
+                        <a href='http://" . ($_SERVER['HTTP_HOST'] ?? 'localhost') . "' class='btn'>Accéder à la plateforme</a>
+                    </div>
+                </div>
+                
+                <div class='footer'>
+                    <p>&copy; " . date('Y') . " Sonatel Academy. Tous droits réservés.</p>
+                    <div class='social-links'>
+                        <a href='#' class='social-icon'>f</a>
+                        <a href='#' class='social-icon'>in</a>
+                        <a href='#' class='social-icon'>t</a>
+                    </div>
+                    <p>Ce message est automatique, merci de ne pas y répondre.</p>
+                </div>
+            </div>
+        </body>
+        </html>
+        ";
+        
+        $mail->send();
+        error_log("Email envoyé avec succès à $email");
+        return true;
+    } catch (Exception $e) {
+        error_log("Erreur d'envoi d'email : {$mail->ErrorInfo}");
+        return false;
+    }
+}
 
 // Fonction pour afficher les détails d'un apprenant
 function apprenant_detail() {
@@ -361,7 +653,28 @@ function add_apprenant_process() {
         $result = $model['add_apprenant']($apprenant);
         
         if ($result) {
-            $session_services['set_flash_message']('success', 'Apprenant ajouté avec succès.');
+            // Récupérer les informations pour l'email
+            $current_promotion = $model['get_current_promotion']();
+            $referentiel = $model['get_referentiel_by_id']($referentiel_id);
+            
+            // Générer un mot de passe temporaire
+            $temp_password = substr(md5(uniqid()), 0, 8);
+            
+            // Préparer les données pour l'email
+            $nom_complet = $prenom . ' ' . $nom;
+            $promotion_nom = $current_promotion ? $current_promotion['name'] : 'Non assignée';
+            $referentiel_nom = $referentiel ? $referentiel['name'] : 'Non assigné';
+            $date_debut = $current_promotion ? $current_promotion['date_debut'] : 'Non définie';
+            
+            // Appeler la fonction d'envoi d'email
+            $email_sent = envoyer_email($email, $nom_complet, $matricule, $temp_password, $promotion_nom, $referentiel_nom, $date_debut);
+            
+            if ($email_sent) {
+                $session_services['set_flash_message']('success', 'Apprenant ajouté avec succès et email de bienvenue envoyé.');
+            } else {
+                $session_services['set_flash_message']('success', 'Apprenant ajouté avec succès mais l\'email n\'a pas pu être envoyé.');
+            }
+            
             redirect('?page=apprenants');
         } else {
             $session_services['set_flash_message']('danger', 'Erreur lors de l\'ajout de l\'apprenant.');
@@ -439,6 +752,7 @@ function import_apprenants_process() {
         $rows = $sheet->toArray();
 
         $added = 0;
+        $emails_sent = 0;
         $errors = [];
         foreach ($rows as $i => $row) {
             if ($i === 0) continue; // skip header
@@ -468,12 +782,14 @@ function import_apprenants_process() {
             }
             // Trouver le référentiel par nom dans la promo active
             $ref_id = null;
+            $referentiel_obj = null;
             foreach ($referentiels as $ref) {
                 if (
                     strtolower($ref['name']) === strtolower($referentiel_name) &&
                     in_array($ref['id'], $current_promotion['referentiels'])
                 ) {
                     $ref_id = $ref['id'];
+                    $referentiel_obj = $ref;
                     break;
                 }
             }
@@ -484,6 +800,9 @@ function import_apprenants_process() {
 
             // Générer matricule unique
             $matricule = 'ODC-' . date('Y') . '-' . rand(1000, 9999);
+            
+            // Générer un mot de passe temporaire
+            $temp_password = substr(md5(uniqid()), 0, 8);
 
             $apprenant = [
                 'matricule' => $matricule,
@@ -497,15 +816,38 @@ function import_apprenants_process() {
                 'photo' => '',
                 'statut' => 'Actif',
                 'tuteur' => [],
-                'promotion_id' => $current_promotion['id']
+                'promotion_id' => $current_promotion['id'],
+                'password' => $temp_password // Ajouter le mot de passe temporaire
             ];
 
-            $model['add_apprenant']($apprenant);
-            $added++;
+            // Ajouter l'apprenant
+            if ($model['add_apprenant']($apprenant)) {
+                $added++;
+                
+                // Préparer les données pour l'email
+                $nom_complet = $prenom . ' ' . $nom;
+                $promotion_nom = $current_promotion['name'] ?? 'Non assignée';
+                $referentiel_nom = $referentiel_obj ? $referentiel_obj['name'] : 'Non assigné';
+                $date_debut = $current_promotion['date_debut'] ?? 'Non définie';
+                
+                // Envoyer l'email de bienvenue
+                if (envoyer_email($email, $nom_complet, $matricule, $temp_password, $promotion_nom, $referentiel_nom, $date_debut)) {
+                    $emails_sent++;
+                } else {
+                    $errors[] = "Ligne $i: apprenant ajouté mais l'email n'a pas pu être envoyé à $email.";
+                }
+            } else {
+                $errors[] = "Ligne $i: erreur lors de l'ajout de l'apprenant.";
+            }
         }
 
+        // Messages de succès et d'erreur
         if ($added) {
-            $session_services['set_flash_message']('success', "$added apprenant(s) importé(s) avec succès.");
+            $message = "$added apprenant(s) importé(s) avec succès.";
+            if ($emails_sent) {
+                $message .= " $emails_sent email(s) de bienvenue envoyé(s).";
+            }
+            $session_services['set_flash_message']('success', $message);
         }
         if ($errors) {
             $session_services['set_flash_message']('danger', implode('<br>', $errors));
